@@ -1,0 +1,42 @@
+.lista {
+    display: flex;
+    justify-content: center;
+    color:#f0c427;
+    font-size: larger;
+}
+
+.voltar button {
+    border-radius: 100px;
+    background: #fdcb08;
+    border: none;
+    height: 60px;
+    width: 90px;
+    font-size: larger;
+    color:#3a7bb8;
+    border-style: groove;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.api img {
+    background:#314545;
+    width: 250px;
+    border-radius: 80px;
+    padding: 15px;
+    margin: 20px;
+    border-style: groove;
+}
+
+.nomes {
+    margin: 15px 118px;
+    font-size: larger;
+    text-transform: capitalize;
+    position: absolute;
+    color:#f0c427;
+}
+

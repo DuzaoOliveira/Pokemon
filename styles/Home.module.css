@@ -1,0 +1,100 @@
+.logo {
+  display: flex;
+  justify-content: center;
+
+}
+
+.logo img {
+  border-radius: 110px;
+  width: 900px;
+  margin-top: 114px;
+  height: 360px;
+
+}
+
+
+.button {
+display: flex;
+justify-content: center;
+}
+
+.button input {
+  border-radius: 100px;
+  width: 500px;
+  height: 30px;
+  background: #fdcb08;
+  border: none;
+  border-style: groove;
+}
+
+.button button {
+  border-radius: 100px;
+  background: #fdcb08;
+  border: none;
+  color: #3a7bb8;
+  font-size: larger;
+  border-style: groove;
+}
+
+.enter {
+  display: flex;
+ align-items: center;
+ margin-top: 20px;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+}
+
+.poke {
+  background-color: #fdcb08;
+  width: 300px;
+  height: 35px;
+  border-radius: 100px;
+  margin-top: 80px;
+  border: none;
+  color: #3a7bb8;
+  font-size: larger;
+  border-style: groove;
+}
+
+.container {
+  background-position: center;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 30px;
+  left: 30%;
+  width: 700px;
+  height: 600px;
+  color: black;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 9999;
+}
+  .fechar button {
+    background: #314545;
+    width: 50px;
+    border-radius: 80px;
+    padding: 15px;
+    margin: 20px;
+    border-style: groove;
+  }
+ 
+
+.content {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: larger;
+  font-weight: bold;
+  border: 2px black solid;
+  border-radius: 20px;
+  text-transform: capitalize;
+  background-color: white;
+}
