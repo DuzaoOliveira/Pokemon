@@ -9,32 +9,22 @@ function Home() {
   const [openModalSearch, setOpenModalSearch] = useState(false);
   const [name, setName] = useState('')
 
-  const handleClick = () => {
-    window.location.href = "/pokemon";
-  };
-  const pesquisar = () => {
-    window.location.href = "/pokemon";
-  };
-
-  const pokemonGo = (value) => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${value}`)
-      .then(function (response) {
-        setResposta(response.data);
-        setOpenModalSearch(true);
-      })
+  const pokemonGo = (name) => {
+    axios
+        .get(
+            `https://pokeapi.co/api/v2/pokemon/${name}`,
+        )
+        .then((preview) => {
+          setResposta(preview.data);
+          setOpenModalSearch(true);
+        })
   }
 
-  useEffect(() => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon`)
-      .then(function (response) {
-        setResposta(response.data);
-        setOpenModalSearch(true);
-      })
-  }, []);
+  console.log(openModalSearch, 'openModalSearch')
 
   return (
     <div>
-      {openModalSearch && resposta && 
+      {openModalSearch &&
         <Modal
           nome={resposta?.name}
           tipo={resposta.types && resposta?.types[0]?.type?.name}
@@ -47,7 +37,7 @@ function Home() {
           imagem={
             resposta?.sprites?.other["official-artwork"]?.front_default
           }
-          setOpenModal={setOpenModalSearch}
+          setModal={setOpenModalSearch}
         />
       } 
 
@@ -59,7 +49,7 @@ function Home() {
         <form>
           <div className={styles.button}>
             <input
-              onChange={(e) => setName(e.target.value)} />
+              onChange={(e) => setName(e.target.value)} value={name}/>
             <button
               onClick={() => pokemonGo(name)} >
               Buscar
@@ -77,7 +67,7 @@ function Home() {
           </div>
 
           <div className={styles.enter}>
-            <button className={styles.poke} onClick={handleClick}>
+            <button className={styles.poke} onClick={() => window.location.href = "/pokemon"}>
               All Pokemons
             </button>
           </div>

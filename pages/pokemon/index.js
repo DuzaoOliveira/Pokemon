@@ -9,8 +9,6 @@ function Pokemons() {
     const [openModal, setOpenModal] = useState(false);
     const [valores, setValores] = useState();
 
-    console.log(valores, 'VALORES')
-
     const escolherPokemon = (name) => {
         setOpenModal(true);
         axios
@@ -81,7 +79,7 @@ function Pokemons() {
           imagem={
             valores?.sprites?.other["official-artwork"]?.front_default
           }
-          setOpenModal={setOpenModal}
+          setModal={setOpenModal}
         />
       } 
         </>
