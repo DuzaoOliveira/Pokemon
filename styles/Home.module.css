@@ -107,3 +107,10 @@ margin-top: -200px;
     font-size: larger;
   }
 
+  @media (max-width: 600px) {
+    .div
+     {
+      background: black;
+     }
+  }
+

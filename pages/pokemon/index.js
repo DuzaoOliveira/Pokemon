@@ -20,7 +20,6 @@ function Pokemons() {
             })
     }
 
-
     useEffect(() => {
         axios
             .get("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
@@ -32,8 +31,6 @@ function Pokemons() {
     const handleClick = () => {
         window.location.href = "/";
     };
-
-    console.log(resposta, "teste");
 
     return (
         <>
@@ -49,7 +46,7 @@ function Pokemons() {
 
             <div className={styles.cards}>
                 <>
-                    {resposta?.results.map((pokemons, index) => {
+                    {resposta?.results.map((pokemons, index, name) => {
                         return (
                             <div className={styles.card} onClick={() => escolherPokemon(pokemons.name)}>
 
@@ -65,23 +62,24 @@ function Pokemons() {
                     })}
                 </>
             </div>
-            
-            {openModal && valores && 
-        <Modal
-          nome={valores?.name}
-          tipo={valores.types && valores?.types[0]?.type?.name}
-          hp={valores.stats && valores?.stats[0].base_stat}
-          ataque={valores.stats && valores?.stats[1].base_stat}
-          defesa={valores.stats && valores?.stats[2].base_stat}
-          ataqueEspecial={valores.stats && valores?.stats[3].base_stat}
-          defesaEspecial={valores.stats && valores?.stats[4].base_stat}
-          velocidade={valores.stats && valores?.stats[5].base_stat}
-          imagem={
-            valores?.sprites?.other["official-artwork"]?.front_default
-          }
-          setModal={setOpenModal}
-        />
-      } 
+
+            {valores &&
+                <Modal
+                    nome={valores?.name}
+                    tipo={valores.types && valores?.types[0]?.type?.name}
+                    hp={valores.stats && valores?.stats[0].base_stat}
+                    ataque={valores.stats && valores?.stats[1].base_stat}
+                    defesa={valores.stats && valores?.stats[2].base_stat}
+                    ataqueEspecial={valores.stats && valores?.stats[3].base_stat}
+                    defesaEspecial={valores.stats && valores?.stats[4].base_stat}
+                    velocidade={valores.stats && valores?.stats[5].base_stat}
+                    imagem={
+                        valores?.sprites?.other["official-artwork"]?.front_default
+                    }
+                    setIsOpen={setOpenModal}
+                    isOpen={openModal}
+                />
+            }
         </>
     );
 }
