@@ -5,7 +5,6 @@ import Modal from "../../components/Modal";
 
 function Pokemons() {
     const [resposta, setResposta] = useState();
-    const [detalhes, setDetalhes] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const [valores, setValores] = useState();
 
@@ -33,7 +32,7 @@ function Pokemons() {
     };
 
     return (
-        <>
+        <div className={styles.cont}>
             <div className={styles.lista}>
                 <h1>Lista de Pokemons</h1>
             </div>
@@ -80,7 +79,8 @@ function Pokemons() {
                     isOpen={openModal}
                 />
             }
-        </>
+        </div>
+
     );
 }
 export default Pokemons;

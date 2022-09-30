@@ -1,7 +1,12 @@
 .logo {
   display: flex;
   justify-content: center;
+}
 
+.cont {
+  width: 1340px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .logo img {
@@ -9,13 +14,12 @@
   width: 900px;
   margin-top: 114px;
   height: 360px;
-
 }
-
 
 .button {
   display: flex;
   justify-content: center;
+  margin-top: 4px;
 }
 
 .button input {
@@ -25,6 +29,7 @@
   background: #fdcb08;
   border: none;
   border-style: groove;
+  padding: 0px 8px;
 }
 
 .button button {
@@ -41,7 +46,6 @@
   align-items: center;
   margin-top: 20px;
 }
-
 
 .card {
   display: flex;
@@ -61,56 +65,30 @@
   border-style: groove;
 }
 
-.container {
-  background-color: #314545;
-  margin-top: 250px;
-  display: flex;
-  position: fixed;
-  border-radius: 100px;
-  border-style: groove;
-  top: 30px;
-  left: 600px;
-  width: 687px;
-  height: 470px;
-  color: #fdcb08;
-  align-items: center;
-
-}
-
-.fechar button {
-  background: #fdcb08;
-  width: 25px;
-  height: 25px;
-  border-radius: 80px;
-  margin-left: 625px;
-  color:#3a7bb8; 
-  margin-top: 37px;
-}
-
-.pokemons {
-margin-left: 300px;
-margin-top: -200px;
-}
-
-.pokemons img {
-  width: 310px;
-  height: 260px;
+@media screen and (max-width: 600px) {
+  .logo img {
+    width: 590px;
+    height: 300px;
   }
 
-  .pokemons text {
-    width: 310px;
-    height: 260px;
-    }
-
-  .texto {
-    margin-left: 60px;
-    font-size: larger;
+  .enter {
+    width: 136px;
   }
 
-  @media (max-width: 600px) {
-    .div
-     {
-      background: black;
-     }
+  .poke {
+    font-size: 15px;
+    width: 135px;
   }
 
+  .button input {
+    width: 100px;
+    height: 15px;
+  }
+
+  .button button {
+    width: 35px;
+    height: 23px;
+    font-size: 6px;
+  }
+
+}

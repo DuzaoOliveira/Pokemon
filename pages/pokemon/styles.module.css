@@ -1,8 +1,14 @@
 .lista {
     display: flex;
     justify-content: center;
-    color:#f0c427;
+    color: #f0c427;
     font-size: larger;
+}
+
+.cont {
+    width: 1340px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .voltar button {
@@ -11,11 +17,11 @@
     border: none;
     height: 60px;
     width: 90px;
+    margin-left: 5px;
     font-size: larger;
-    color:#3a7bb8;
+    color: #3a7bb8;
     border-style: groove;
 }
-
 
 .cards {
     display: flex;
@@ -24,7 +30,7 @@
 }
 
 .api img {
-    background:#314545;
+    background: #314545;
     width: 250px;
     border-radius: 80px;
     padding: 15px;
@@ -34,11 +40,40 @@
 
 .nomes {
     margin: 15px 118px;
+    padding: 0 6px;
     font-size: larger;
     text-transform: capitalize;
     position: absolute;
-    color:#f0c427;
+    color: #f0c427;
 }
 
+@media screen and (max-width: 600px) {
+    .lista {
+        font-size: 10px;
+    }
 
+    .voltar {
+        font-size: 6px;
+    }
 
+    .voltar button {
+        width: 36px;
+        height: 19px;
+    }
+
+    .api img {
+        width: 43px;
+        margin-left: 10px;
+    }
+
+    .nomes {
+        font-size: 6px;
+        margin-left: 36px;
+        margin-top: 25px;
+    }
+
+    .cards {
+        margin-left: 5px;
+    }
+
+}

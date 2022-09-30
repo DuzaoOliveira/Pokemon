@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from '../../styles/Home.module.css'
+import styles from './styles.module.css'
 
 export default function Modal({
     nome,
@@ -15,14 +15,14 @@ export default function Modal({
     imagem,
 }) {
     return (
-        <>
+        <div >
             {isOpen && (
-                <div className={Styles.container}>
-                    <div className={Styles.mod}>
-                        <div className={Styles.fechar}>
+                <div className={styles.modal}>
+                    <div className={styles.mod}>
+                        <div className={styles.fechar}>
                             <button onClick={() => setIsOpen(false)}>x</button>
                         </div>
-                        <div className={Styles.texto}>
+                        <div className={styles.texto}>
                             <p>Nome:{nome}</p>
                             <p>Tipo:{tipo}</p>
                             <p>HP:{hp}</p>
@@ -32,12 +32,12 @@ export default function Modal({
                             <p>Defesa-Especial:{defesaEspecial}</p>
                             <p>Velocidade:{velocidade}</p>
                         </div>
-                        <div className={Styles.pokemons}>
+                        <div className={styles.pokemons}>
                             <img src={imagem} alt={nome} />
                         </div>
                     </div>
                 </div>
             )}
-        </>
+        </div>
     )
 }

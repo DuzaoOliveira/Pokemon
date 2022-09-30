@@ -17,7 +17,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className={styles.cont}>
       {resposta &&
         <>
           <Modal
@@ -39,31 +39,31 @@ function Home() {
       {Object.values(resposta).map((item) => {
         <p>{item?.name}</p>;
       })}
-<div className={styles.mob}>
-      <div className={styles.button}>
-        <input onChange={(e) => setName(e.target.value)} value={name} />
-        <button onClick={() => pokemonGo(name)}>Buscar</button>
-      </div>
-
-      <div className={styles.card}>
-        <div className={styles.logo}>
-          <img
-            src='https://tm.ibxk.com.br/2019/09/30/30091641838086.jpg?ims=1120x420'
-            alt="logo pokemon"
-          />
+      <div className={styles.mob}>
+        <div className={styles.button}>
+          <input onChange={(e) => setName(e.target.value)} value={name} />
+          <button onClick={() => pokemonGo(name)}>Buscar</button>
         </div>
 
-        <div className={styles.enter}>
-          <button className={styles.poke} onClick={() => window.location.href = "/pokemon"}>
-            All Pokemons
-          </button>
+        <div className={styles.card}>
+          <div className={styles.logo}>
+            <img
+              src='https://tm.ibxk.com.br/2019/09/30/30091641838086.jpg?ims=1120x420'
+              alt="logo pokemon"
+            />
+          </div>
+
+          <div className={styles.enter}>
+            <button className={styles.poke} onClick={() => window.location.href = "/pokemon"}>
+              All Pokemons
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    
+
     </div>
   );
-  
+
 }
 
 
